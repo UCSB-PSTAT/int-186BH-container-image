@@ -1,11 +1,11 @@
-FROM ucsb/jupyter-base:latest
+FROM ucsb/scipy-base:latest
 
 MAINTAINER LSIT Systems <lsitops@lsit.ucsb.edu>
 
 USER root
 
-#RUN mamba install -y astropy <libraries>
+RUN mamba install -y nltk networkx tensorflow-cpu plotly pymupdf dlib spacy
 
-#RUN pip install <libraries>
+RUN pip install deepface gensim
 
 USER $NB_USER
